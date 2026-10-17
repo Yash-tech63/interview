@@ -1,8 +1,13 @@
-import axios from 'axios'
+
+import axios from "axios";
+
 const API = axios.create({
-    baseURL: "http://localhost:3000/api",
+    baseURL: import.meta.env.PROD
+        ? "https://interview-lovat-one.vercel.app/api"
+        : "http://localhost:3000/api",
     withCredentials: true
-})
+});
+
 API.interceptors.request.use((req) => {
     const token = localStorage.getItem("token");
 
@@ -11,6 +16,6 @@ API.interceptors.request.use((req) => {
     }
 
     return req;
-
 });
+
 export default API;

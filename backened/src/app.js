@@ -1,9 +1,9 @@
+const cors = require("cors")
 const express = require("express");
 const authRoutes = require("./routes/auth.routes")
 const cookieParser = require("cookie-parser")
 const interviewRoutes = require("./routes/interviewroutes")
 const chatRoutes = require("./routes/chat.routes")
-const cors = require("cors")
 
 
 const app = express();

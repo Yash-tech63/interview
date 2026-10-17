@@ -15,11 +15,7 @@ import Chatbot from './pages/chatbot'
 // import FaceRegister from './pages/faceRegister'
 
 function App() {
-  const API_URL = import.meta.env.VITE_API_URL;
 
-  fetch(`${API_URL}/users`)
-    .then(res => res.json())
-    .then(data => console.log(data));
   return (
     <div>
 

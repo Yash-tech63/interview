@@ -14,7 +14,11 @@ io.on("connection", (socket) => {
     });
 });
 const connectDB = require("./src/db/db");
-
+app.get("/", (req, res) => {
+    res.status(200).json({
+        message: "Backend is running"
+    });
+});
 connectDB();
 app.listen(3000, () => {
     console.log("server is running on port 3000")

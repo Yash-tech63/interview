@@ -28,5 +28,8 @@ app.use(
     "/api/face",
     faceRoutes
 );
+// app.get("/", {
+//     message: "backened is running"
+// })
 
 module.exports = app;
